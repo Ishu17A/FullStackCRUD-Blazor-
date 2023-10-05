@@ -1,0 +1,36 @@
+﻿@page "/user/edit/{Id:guid}"
+
+@inject HttpClient Httpclient
+@using Blazor_CRUD.Model;
+@inject NavigationManager NavigationManager
+
+
+    <EditForm Model="@employee">
+
+        <div class="mb-3">
+            <label for="Name" class="form-label">Name</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="employee.Name" />
+            </div>
+
+        </div>
+        <div class="mb-3">
+            <label for="Address" class="form-label">Address</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="employee.Title" />
+            </div>
+
+        </div>
+        <div class="mb-3">
+            <label for="Cellnumber" class="form-label">Cell No</label>
+            <div class="col-md-4">
+                <InputText class="form-control" @bind-Value="employee.Brand" />
+            </div>
+
+        </div>
+        <div class="form-group">
+        <button type="submit" class="btn btn-primary" @onclick="SaveEmployee">Save</button>
+        </div>
+    </EditForm>
+
+

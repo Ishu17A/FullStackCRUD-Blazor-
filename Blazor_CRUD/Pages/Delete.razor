@@ -1,0 +1,36 @@
+﻿@page "/user/delete/{Id:guid}"
+@inject HttpClient Httpclient
+@using Blazor_CRUD.Model;
+@inject NavigationManager NavigationManager
+<h2>Delete User</h2>
+<br />
+
+ 
+
+   <div class="form-group">
+    <h4>Do you want to delete this user?</h4>
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>Name</td>
+                <td>@employee.Name</td>
+            </tr>
+            <tr>
+                <td>Address</td>
+                <td>@employee.Brand</td>
+            </tr>
+            <tr>
+                <td>Cell No</td>
+                <td>@employee.Title</td>
+            </tr>
+        </tbody>
+    </table>
+    </div
+
+
+    <div class="form-group">
+  
+     <input type="submit" value="Delete" @onclick="(async () => await RemoveUser(employee.Id))" class="btn btn-danger" />
+
+    </div>
+

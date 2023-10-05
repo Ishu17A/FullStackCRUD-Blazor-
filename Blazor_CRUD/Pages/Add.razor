@@ -1,0 +1,26 @@
+﻿@page "/employee/add"
+@using Blazor_CRUD.Model;
+@inject NavigationManager MyNavigationManager
+<h3>Add</h3>
+    
+<!-- Your component HTML -->
+
+<h3>Add Employee</h3>
+
+<div>
+    <label for="employeeName">Name:</label>
+    <input type="text" id="employeeName" @bind="employee.Name" />
+</div>
+
+<div>
+    <label for="employeeBrand">Brand</label>
+    <input type="text" id="employeeBrand" @bind="employee.Brand" />
+</div>
+
+<div>
+    <label for="employeeTitle">Title</label>
+    <input type="text" id="employeeTitle" @bind="employee.Title" />
+</div>
+
+<button @onclick="CreateEmployee">Create</button>
+
